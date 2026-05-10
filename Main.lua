@@ -28,8 +28,22 @@ local ConfigTab = Window:MakeTab({
 
 MainTab:AddSection("Button")
 MainTab:AddButton({
-  Name = "Test Button",
+  Name = "Low Gravity",
   Callback = function()
+   player.Character.Humanoid.JumpPower = 100 
+    Window:Notify({
+      Title = "Clicked",
+      Content = "You pressed the button",
+      Duration = 3
+    })
+  end
+})
+
+MainTab:AddSection("Button")
+MainTab:AddButton({
+  Name = "Speed Boost",
+  Callback = function()
+  player.Character.Humanoid.WalkSpeed = 500
     Window:Notify({
       Title = "Clicked",
       Content = "You pressed the button",
@@ -78,15 +92,15 @@ MainTab:AddToggle({
   end
 })
 
-MainTab:AddToggle("Player Speed")
-MainTab:AddToggle({
+MainTab:AddSection("Slider")
+MainTab:AddSlider({
   Name = "Speed",
   Min = 0,
-  Max = 500,
+  Max = 100,
   Increment = 5,
   Default = 50,
   Callback = function(v)
-    player.Character.Humanoid.WalkSpeed = 500
+    print(v)
   end
 })
 
