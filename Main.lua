@@ -1,9 +1,9 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/newredzv3/Library/refs/heads/main/Redz-V5-remake/main.luau"))()
 
 local Window = Library:MakeWindow({
-  Title = "Phyoz Hub : Blox Fruits",
-  SubTitle = "Example Make",
-  ScriptFolder = "Need UI"
+  Title = "Phyoz Hub : Speed Boost Scripts",
+  SubTitle = "Speed",
+  ScriptFolder = "wand-ui"
 })
 
 local Minimizer = Window:NewMinimizer({
@@ -52,6 +52,32 @@ MainTab:AddToggle({
   end
 })
 
+MainTab:AddToggle({
+  Name = "Auto Farm Near Mobs",
+  Default = false,
+  Flag = "auto_farm",
+  Callback = function(v)
+    Window:Notify({
+      Title = "Toggle",
+      Content = tostring(v),
+      Duration = 3
+    })
+  end
+})
+
+MainTab:AddToggle({
+  Name = "Auto Factory",
+  Default = false,
+  Flag = "auto_farm",
+  Callback = function(v)
+    Window:Notify({
+      Title = "Toggle",
+      Content = tostring(v),
+      Duration = 3
+    })
+  end
+})
+
 MainTab:AddSection("Slider")
 MainTab:AddSlider({
   Name = "Speed",
@@ -67,8 +93,8 @@ MainTab:AddSlider({
 MainTab:AddSection("Dropdown")
 MainTab:AddDropdown({
   Name = "Select Fruit",
-  Options = {"Light","Dough","Leopard"},
-  Default = "Light",
+  Options = {"Phyo Zaw Min","La Min Hein","Than Zaw Lin"},
+  Default = "Select one",
   Callback = function(v)
     print(v)
   end
@@ -79,7 +105,7 @@ MainTab:AddDropdown({
   Name = "Multi Select",
   MultiSelect = true,
   Options = {"A","B","C","D","E","F","G","H","I"},
-  Default = {"A"},
+  Default = {"Select one"},
   Callback = function(v)
     print(v)
   end
@@ -100,7 +126,7 @@ MainTab:AddParagraph("Info","Line 1\nLine 2")
 
 MainTab:AddSection("Discord")
 MainTab:AddDiscordInvite({
-  Title = "redz hub : Community",
+  Title = "Phyoz Hub : Community",
   Description = "",
   Banner = "rbxassetid://17382040552",
   Logo = "rbxassetid://17382040552",
@@ -111,7 +137,7 @@ ConfigTab:AddSection("UI Scale")
 ConfigTab:AddSlider({
   Name = "Scale",
   Min = 0.6,
-  Max = 1.6,
+  Max = 2,
   Increment = 0.1,
   Default = 1,
   Callback = function(v)
