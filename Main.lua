@@ -78,15 +78,15 @@ MainTab:AddToggle({
   end
 })
 
-MainTab:AddSection("Slider")
-MainTab:AddSlider({
+MainTab:AddToggle("Player Speed")
+MainTab:AddToggle({
   Name = "Speed",
   Min = 0,
-  Max = 100,
+  Max = 500,
   Increment = 5,
   Default = 50,
   Callback = function(v)
-    print(v)
+    player.Character.Humanoid.WalkSpeed = 500
   end
 })
 
