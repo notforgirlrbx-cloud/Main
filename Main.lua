@@ -2,7 +2,7 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/newre
 
 local Window = Library:MakeWindow({
   Title = "Phyoz Hub : Speed Boost Scripts",
-  SubTitle = "Speed",
+²  SubTitle = "Speed",
   ScriptFolder = "wand-ui"
 })
 
@@ -30,7 +30,6 @@ MainTab:AddSection("Button")
 MainTab:AddButton({
   Name = "Low Gravity",
   Callback = function()
-   player.Character.Humanoid.JumpPower = 100 
     Window:Notify({
       Title = "Clicked",
       Content = "You pressed the button",
@@ -39,11 +38,9 @@ MainTab:AddButton({
   end
 })
 
-MainTab:AddSection("Button")
 MainTab:AddButton({
   Name = "Speed Boost",
   Callback = function()
-  player.Character.Humanoid.WalkSpeed = 500
     Window:Notify({
       Title = "Clicked",
       Content = "You pressed the button",
