@@ -21,13 +21,17 @@ local MainTab = Window:MakeTab({
   Icon = "Home"
 })
 
+local FarmingTab = Window:MakeTab({
+  Title = "Farming",
+  Icon = "Apple"
+})
 local ConfigTab = Window:MakeTab({
   Title = "Config",
   Icon = "Settings"
 })
 
-MainTab:AddSection("Button")
-MainTab:AddButton({
+FarmingTab:AddSection("Button")
+FarmingTab:AddButton({
   Name = "Low Gravity",
   Callback = function()
     Window:Notify({
@@ -38,7 +42,7 @@ MainTab:AddButton({
   end
 })
 
-MainTab:AddButton({
+FarmingTab:AddButton({
   Name = "Speed Boost",
   Callback = function()
     Window:Notify({
@@ -49,8 +53,8 @@ MainTab:AddButton({
   end
 })
 
-MainTab:AddSection("Toggle")
-MainTab:AddToggle({
+FarmingTab:AddSection("Toggle")
+FarmingTab:AddToggle({
   Name = "Auto Farm",
   Default = false,
   Flag = "auto_farm",
@@ -63,7 +67,7 @@ MainTab:AddToggle({
   end
 })
 
-MainTab:AddToggle({
+FarmingTab:AddToggle({
   Name = "Auto Farm Near Mobs",
   Default = false,
   Flag = "auto_farm",
@@ -76,7 +80,7 @@ MainTab:AddToggle({
   end
 })
 
-MainTab:AddToggle({
+FarmingTab:AddToggle({
   Name = "Auto Factory",
   Default = false,
   Flag = "auto_farm",
@@ -89,8 +93,8 @@ MainTab:AddToggle({
   end
 })
 
-MainTab:AddSection("Slider")
-MainTab:AddSlider({
+FarmingTab:AddSection("Slider")
+FarmingTab:AddSlider({
   Name = "Speed",
   Min = 0,
   Max = 100,
